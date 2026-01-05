@@ -27,39 +27,60 @@
 #define EXTRA3 8
 
 &mt {
-  quick-tap-ms = <100>;
-  global-quick-tap;
-  flavor = "tap-preferred";
-  tapping-term-ms = <170>;
+  /* quick-tap-ms = <100>; */
+  quick-tap-ms = <250>;
+  require-prior-idle-ms = <250>;
+  /* global-quick-tap; */
+  /* flavor = "tap-preferred"; */
+  /* tapping-term-ms = <170>; */
 };
 
 / {
+/* https://github.com/iamavolk/totem-shield-module/blob/main/config/totem.keymap */
+// trying to fix my home row mods 
 
     behaviors {
-        hm_lgui: hm_lgui {
+    /*     hm_lgui: hm_lgui { */
+    /*         compatible = "zmk,behavior-hold-tap"; */
+    /*         label = "HM_LGUI"; */
+    /*         #binding-cells = <2>; */
+    /**/
+    /*         tapping-term-ms = <150>; */
+    /*         quick-tap-ms = <0>; */
+    /*         require-prior-idle-ms = <100>; */
+    /*         flavor = "tap-preferred"; */
+    /**/
+    /*         bindings = <&kp &kp>; */
+    /*     }; */
+    /**/
+    /*     hm_rgui: hm_rgui { */
+    /*         compatible = "zmk,behavior-hold-tap"; */
+    /*         label = "HM_RGUI"; */
+    /*         #binding-cells = <2>; */
+    /**/
+    /*         tapping-term-ms = <150>; */
+    /*         quick-tap-ms = <0>; */
+    /*         require-prior-idle-ms = <100>; */
+    /*         flavor = "tap-preferred"; */
+    /**/
+    /*         bindings = <&kp &kp>; */
+    /*     }; */
+
+
+     /*  iamavolk- Tapping the key invokes the Caps-Word
+        *   behavior while holding it is used
+        *   as a regular key press.
+        *
+        *   One thing to note here is that the second parameter
+        *   is passed a dummy argument value (e.g. 0), per the 
+        *   official documentation.
+        */
+        ht_caps: hold_tap_caps {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM_LGUI";
             #binding-cells = <2>;
-
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
-            flavor = "tap-preferred";
-
-            bindings = <&kp &kp>;
-        };
-
-        hm_rgui: hm_rgui {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HM_RGUI";
-            #binding-cells = <2>;
-
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
-            flavor = "tap-preferred";
-
-            bindings = <&kp &kp>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&caps_word>;
+            display-name = "Caps Hold Tap";
         };
     };
      combos {
@@ -111,8 +132,9 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
-                &hm_lgui LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T &kp G           &kp M       &mt RCTRL N &mt RSHFT E &mt RALT I  &hm_rgui RGUI O
-    &kp Q       &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
+                /* &hm_lgui LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T &kp G           &kp M       &mt RCTRL N &mt RSHFT E &mt RALT I  &hm_rgui RGUI O */
+                &mt LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T &kp G           &kp M       &mt RCTRL N &mt RSHFT E &mt RALT I  &mt RGUI O
+    &ht_caps Q 0       &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
                                         &kp DEL   &lt NAV TAB   &kp SPACE       &kp RET   &lt SYM ESC   &kp BSPC
                         >;
                 };
