@@ -41,9 +41,9 @@
             label = "HM_LGUI";
             #binding-cells = <2>;
 
-            tapping-term-ms = <220>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <110>;
             flavor = "tap-preferred";
 
             bindings = <&kp &kp>;
@@ -54,9 +54,9 @@
             label = "HM_RGUI";
             #binding-cells = <2>;
 
-            tapping-term-ms = <220>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <110>;
             flavor = "tap-preferred";
 
             bindings = <&kp &kp>;
