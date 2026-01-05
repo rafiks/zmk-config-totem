@@ -46,7 +46,7 @@
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
 
-            bindings = <&kp LGUI &kp A>;
+            bindings = <&kp &kp>;
         };
 
         hm_rgui: hm_rgui {
@@ -59,7 +59,7 @@
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
 
-            bindings = <&kp RGUI &kp O>;
+            bindings = <&kp &kp>;
         };
     };
      combos {
@@ -111,7 +111,7 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
-                &hm_lgui  &mt LALT R  &mt LSHFT S &mt LCTRL T &kp G           &kp M       &mt RCTRL N &mt RSHFT E &mt RALT I  &hm_rgui
+                &hm_lgui LGUI A  &mt LALT R  &mt LSHFT S &mt LCTRL T &kp G           &kp M       &mt RCTRL N &mt RSHFT E &mt RALT I  &hm_rgui RGUI O
     &kp Q       &kp Z       &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
                                         &kp DEL   &lt NAV TAB   &kp SPACE       &kp RET   &lt SYM ESC   &kp BSPC
                         >;
