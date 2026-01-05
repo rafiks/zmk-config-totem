@@ -39,7 +39,7 @@
         hm_lgui: hm_lgui {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_LGUI";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
 
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
@@ -52,7 +52,7 @@
         hm_rgui: hm_rgui {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_RGUI";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
 
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
