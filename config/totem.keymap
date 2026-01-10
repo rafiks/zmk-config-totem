@@ -97,7 +97,7 @@
             bindings = <
               &macro_press &kp HOME
               &macro_tap &kp DOWN
-              &macro_release HOME
+              &macro_release &kp HOME
             >;
         };
     };
