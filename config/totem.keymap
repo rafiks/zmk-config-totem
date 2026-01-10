@@ -88,9 +88,6 @@
                 , <&macro_tap &kp G &kp I &kp F>
                 ;
         };
-    };
-
-    macros {
         home_down: home_down {
             label = "home_down";
             compatible = "zmk,behavior-macro";
@@ -102,6 +99,7 @@
             >;
         };
     };
+
     keymap {
             compatible = "zmk,keymap";
   // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
