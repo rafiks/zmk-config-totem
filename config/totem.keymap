@@ -82,7 +82,8 @@
         gif: gif {
             label = "giphy";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>; bindings = <&macro_press &kp LSHFT>
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp N2>
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp G &kp I &kp F>
@@ -92,11 +93,10 @@
             label = "home_down";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-              &macro_press HOME
-              &macro_tap DOWN
-              &macro_release HOME
-            >;
+            bindings = <&macro_press &kp HOME>
+              ,<&macro_tap &kp DOWN>
+              ,<&macro_release HOME>
+              ;
         };
     };
 
