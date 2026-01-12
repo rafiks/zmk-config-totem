@@ -62,6 +62,7 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = < TOTEM_L_POS >; // List of keys on the left side of the keyboard hold-trigger-on-release;
+            hold-trigger-on-release;
         };
     };
      combos {
