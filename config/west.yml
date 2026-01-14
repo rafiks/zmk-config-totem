@@ -12,5 +12,8 @@ manifest:
     - name: zmk-totem-module
       remote: rafiks
       revision: main
+    - name: prospector-zmk-module
+      remote: rafiks
+      revision: main
   self:
     path: config
