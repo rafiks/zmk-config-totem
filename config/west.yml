@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: rafiks
       url-base: https://github.com/rafiks
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,7 +15,7 @@ manifest:
       remote: rafiks
       revision: main
     - name: prospector-zmk-module
-      remote: rafiks
+      remote: carrefinho
       revision: feat/new-status-screens
   self:
     path: config
