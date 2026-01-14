@@ -16,6 +16,6 @@ manifest:
       revision: main
     - name: prospector-zmk-module
       remote: carrefinho
-      revision: core/zephyr-4-1
+      revision: main
   self:
     path: config
