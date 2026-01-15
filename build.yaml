@@ -1,12 +1,30 @@
 include:
   - board: xiao_ble
     shield: totem_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: totem-dongle-left
   - board: xiao_ble
     shield: totem_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: totem-dongle-right
+  - board: xiao_ble
+    shield: totem_left
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    snippet: studio-rpc-usb-uart
+    artifact-name: totem-ble-left
+  - board: xiao_ble
+    shield: totem_right
+    artifact-name: totem-ble-right
   - board: xiao_ble
     shield: totem_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000 -DCONFIG_ZMK_STUDIO=y
+    snippet: zmk-usb-logging studio-rpc-usb-uart
+    artifact-name: totem-dongle-prospector
+  - board: xiao_ble
+    shield: totem_dongle
+    cmake-args: -DCONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+    snippet: zmk-usb-logging
+    artifact-name: totem-dongle
   - board: xiao_ble
     shield: settings_reset
-# there is no settingsreset (needed) for the XIAO
+    artifact-name: totem-settings-reset
