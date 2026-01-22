@@ -9,13 +9,13 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
     - name: zmk-totem-module
       remote: rafiks
       revision: main
     - name: prospector-zmk-module
-      remote: rafiks
+      remote: carrefinho
       revision: main
   self:
     path: config
