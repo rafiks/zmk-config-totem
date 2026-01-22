@@ -1,0 +1,66 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    layout_0: layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "TOTEM";
+
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot   rx   ry
+            = <&key_physical_attrs 105 100   77  351 (-1000)   130   201>
+            , <&key_physical_attrs 105 100  216  260  (-400)   249   110>
+            , <&key_physical_attrs 105 100  347  200       0     0     0>
+            , <&key_physical_attrs 105 100  453  249       0     0     0>
+            , <&key_physical_attrs 105 100  559  265       0     0     0>
+            , <&key_physical_attrs 105 100 1100  265       0     0     0>
+            , <&key_physical_attrs 105 100 1204  249       0     0     0>
+            , <&key_physical_attrs 105 100 1305  200       0     0     0>
+            , <&key_physical_attrs 105 100 1435  260     400  1253   110>
+            , <&key_physical_attrs 105 100 1570  322    1000  1372   202>
+            , <&key_physical_attrs 105 100   95  450 (-1000)   147   300>
+            , <&key_physical_attrs 105 100  223  360  (-400)   256   210>
+            , <&key_physical_attrs 105 100  347  300       0     0     0>
+            , <&key_physical_attrs 105 100  453  349       0     0     0>
+            , <&key_physical_attrs 105 100  559  365       0     0     0>
+            , <&key_physical_attrs 105 100 1100  366       0     0     0>
+            , <&key_physical_attrs 105 100 1204  349       0     0     0>
+            , <&key_physical_attrs 105 100 1305  300       0     0     0>
+            , <&key_physical_attrs 105 100 1430  360     400  1246   210>
+            , <&key_physical_attrs 105 100 1553  424    1000  1355   300>
+            , <&key_physical_attrs 105 100    0  523 (-1000)    52   373>
+            , <&key_physical_attrs 105 100  112  548 (-1000)   165   398>
+            , <&key_physical_attrs 105 100  230  460  (-400)   263   310>
+            , <&key_physical_attrs 105 100  347  400       0     0     0>
+            , <&key_physical_attrs 105 100  453  449       0     0     0>
+            , <&key_physical_attrs 105 100  559  465       0     0     0>
+            , <&key_physical_attrs 105 100 1100  466       0     0     0>
+            , <&key_physical_attrs 105 100 1204  449       0     0     0>
+            , <&key_physical_attrs 105 100 1305  400       0     0     0>
+            , <&key_physical_attrs 105 100 1426  460     400  1239   310>
+            , <&key_physical_attrs 105 100 1537  520    1000  1338   399>
+            , <&key_physical_attrs 105 100 1645  500    1000  1450   373>
+            , <&key_physical_attrs 105 100  433  571       0     0     0>
+            , <&key_physical_attrs 105 100  595  570    1500   563   437>
+            , <&key_physical_attrs 105 100  745  585    3000   672   482>
+            , <&key_physical_attrs 105 100  880  725 (-3000)   831   482>
+            , <&key_physical_attrs 105 100 1060  640 (-1500)   939   437>
+            , <&key_physical_attrs 105 100 1235  571       0     0     0>
+            , <&key_physical_attrs 105 150  680    0       0     0     0>
+            , <&key_physical_attrs 105 105  780    0       0     0     0>
+            , <&key_physical_attrs 105 105  880    0       0     0     0>
+            , <&key_physical_attrs 105 150  980    0       0     0     0>
+            , <&key_physical_attrs 105 150  680  150       0     0     0>
+            , <&key_physical_attrs 105 150  980  150       0     0     0>
+            ;
+    };
+
+        position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        layout_0 {
+            physical-layout = <&layout_0>;
+            positions = <>;
+        };
+    };
+};

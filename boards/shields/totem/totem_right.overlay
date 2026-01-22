@@ -5,12 +5,25 @@
  */
 
 #include "totem.dtsi"
+#include "totem-layouts.dtsi"
+
+/ {
+chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &layout_0;
+        };
+};
 
 &default_transform {
     col-offset = <5>;
 };
 
 &kscan0 {
+
+   compatible = "zmk,kscan-gpio-matrix";
+         wakeup-source;
+         diode-direction = "col2row";
+
     col-gpios
         = <&xiao_d 8 GPIO_ACTIVE_HIGH>
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
